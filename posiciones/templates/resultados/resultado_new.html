@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %} Resultados {% endblock %}
+{% block div_title %} Asignar posiciones en carrera "{{ carrera }}"{% endblock %}
+
+
+
+{% block div_contenido %}
+    <div class="d-flex justify-content-center py-4 px-4">
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th>EQUIPO</th>
+                <th>CIUDAD</th>
+                <th>AGREGAR POSICIONES</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                {% for resultado in resultados %}
+                    <tr>
+                        <td>{{ resultado.nombre }}</td>
+                        <td>{{ resultado.ciudad }}</td>
+                        <td>
+                            <a class="btn btn-outline-info"
+                               href="{% url 'posiciones:asignar_resultado' %}?equipo={{ resultado.nombre }}&carrera={{ carrera }}"><i
+                                    class="bi bi-list-ol fs-6"></i> Asignar posicion</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <a class="d-flex justify-content-center btn btn-success"
+       href="{% url 'posiciones:resultados' %}?carrera={{ carrera }}">FINALIZAR
+        CARRERA</a>
+
+{% endblock %}

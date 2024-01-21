@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% load crispy_forms_tags %}
+
+{% block div_contenido %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Carreras (FUNCIONES)</h1>
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h3 class="align-content-center ">Agregar nueva Carrera</h3>
+                <h3 class="align-content-center text-info ">{{ mensaje }}</h3>
+            </div>
+            <div class="card-body">
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="d-flex justify-content-end">
+                        <a href="{% url 'posiciones:carrera_listF' %}" class="btn btn-secondary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-forward"></i>
+                                        </span>
+                            <span class="text">Cancelar</span>
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            Agregar
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

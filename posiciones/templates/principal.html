@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Tecnology</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+<body class="principal" background="img/fondo2.jpg">
+    <div class="slider">
+        <ul>
+            <li>
+                <img src="{% static 'img/bici1.jpeg' %}"
+                alt="">
+            </li>
+            <li>
+                <img src="{% static 'img/bici2.jpg' %}"
+                alt="">
+            </li>
+            <li>
+                <img src="{% static 'img/bici3.jpg' %}"
+                alt="">
+            </li>
+            <li>
+                <img src="{% static 'img/bici4.jpeg' %}"
+                alt="">
+            </li>
+
+        </ul>
+    </div>
+    <section>
+                <div class="contenedor">
+                    <div class="formulario">
+                        <div class="logo">
+                            <img class="img" src="img/logo.png">
+                        </div>
+                        <form action="#">
+                            <h2>Bienvenido a Cycling Technology</h2>
+                            <p>Cycling technology se encarga de automatizar tus carreras</p>
+
+                        </form>
+                        <div>
+                            <button>
+                                <a href="{% url 'login' %}">Inicio </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    </section>
+</body>
+</html>

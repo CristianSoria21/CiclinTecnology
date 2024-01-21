@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Tecnology</title>
+
+    <link rel="stylesheet" href="{% static 'css/regiscorre.css' %}">
+
+</head>
+<body class="pagina">
+
+    <div class="principal">
+        <div class="equipo">
+            <h1>Nombre Del Equipo</h1>
+        </div>
+        <div class="cuadros">
+            <div class="datos">
+                <div class="nombre">
+                    <h2>Nombre</h2>
+                    <input type="text" class="nom" placeholder="Nombre">
+                </div>
+                <div class="contra">
+                    <h2>Direccion</h2>
+                    <input type="text" class="nom" placeholder="DIRECCION">
+                </div>
+                <div class="contra">
+                    <h2>Telefono</h2>
+                    <input type="text" class="nom" placeholder="+52">
+                </div>
+                <div class="ciu">
+                    <h2>Ciudad</h2>
+                    <input type="text" class="nom" placeholder="CIUDAD">
+                </div>
+            </div>
+            <div class="datos">
+                <div class="nombre">
+                    <h2>Estado</h2>
+                    <input type="text" class="nom" placeholder="ESTADO">
+                </div>
+                <div class="contra">
+                    <h2>Curp</h2>
+                    <input type="text" class="nom" placeholder="CURP">
+                </div>
+                <div class="doble">
+                    <div class="canti">
+                        <h2>Edad</h2>
+                    </div>
+                    <div class="canti">
+                        <h2>Tipo de Sangre</h2>
+                    </div>
+                    
+                </div>
+                <div class="info">
+                    <div class="edad">
+                        <img class="fle" src="{% static 'img/flecha.png' %}" alt="">
+                    </div>
+                    <div class="sang">
+                        <h2>O+</h2>
+                    </div>
+                </div>
+                <div class="canti">
+                    <h2>Categoria</h2>
+                </div>
+                <div class="conta">
+                    <img class="fle" src="{% static 'img/flecha.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="btnini">
+            <button class="btnden">REGISTRAR</button>
+        </div>
+    </div>
+</body>
+</html>

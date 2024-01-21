@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %} Carreras basada en FUNCIONES {% endblock %}
+{% block div_title %} Carreras  basada en FUNCIONES{% endblock %}
+
+
+
+{% block div_contenido %}
+    <a class="btn btn-success" href="{% url 'posiciones:carrera_newF' %}">Agregar Nueva Carrera</a>
+    <a class="btn btn-primary" href="{% url 'posiciones:carrera_list' %}">Carrera (basada en Clases)</a>
+
+    <div class="d-flex justify-content-center py-2 px-2">
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>FECHA</th>
+                <th>N. VUELTAS</th>
+                <th>UBICACION</th>
+                <th>ACCIONES</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for carrera in carreras %}
+                <tr>
+                    <td>{{ carrera.id_carrera }}</td>
+                    <td>{{ carrera.nombre }}</td>
+                    <td>{{ carrera.fecha }}</td>
+                    <td>{{ carrera.vueltas }}</td>
+                    <td>{{ carrera.ubicacion }}</td>
+                    <td>
+                        <a class="btn btn-danger" href="{% url 'posiciones:carrera_deleteF' carrera.id_carrera %}"><i
+                                class="bi bi-trash3-fill fs-6"></i></a>
+                        <a class="btn btn-warning" href="{% url 'posiciones:carrera_updateF' carrera.id_carrera %}"><i
+                                class="bi bi-pencil-fill fs-6"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock %}

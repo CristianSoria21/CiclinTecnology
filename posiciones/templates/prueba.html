@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Lateral</title>
+    <link rel="stylesheet" href="{% static 'css/prueba.css' %}">
+</head>
+<body>
+    <aside class="sidebar">
+        <ul>
+            <li id="item1">Opción 1</li>
+            <li id="item2">Opción 2</li>
+            <li id="item3">Opción 3</li>
+        </ul>
+    </aside>
+    <div class="content">
+        <div id="info1" class="info">Información para la Opción 1</div>
+        <div id="info2" class="info">Información para la Opción 2</div>
+        <div id="info3" class="info">Información para la Opción 3</div>
+    </div>
+    <script src="{% static 'js/prueba.js' %}"></script>
+</body>
+</html>

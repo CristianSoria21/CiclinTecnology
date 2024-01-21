@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Tecnology</title>
+
+    <link rel="stylesheet" href="{% static 'css/registros.css' %}">
+
+</head>
+<body class="pagina">
+
+    <div class="principal">
+        <div class="barra">
+            <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+        </div>
+        <div class="datos">
+            <div class="nombre">
+                <h2>Nombre del Equipo</h2>
+                <label>
+                    <input type="text" class="nom" placeholder="Nombre">
+                </label>
+            </div>
+            <div class="contra">
+                <h2>Ciudad</h2>
+                <label>
+                    <input type="text" class="nom" placeholder="CIUDAD">
+                </label>
+            </div>
+            <div class="canti">
+                <h2>Cantidad de Corredores</h2>
+            </div>
+            <div class="conta">
+                <img class="fle" src="{% static 'img/logo.png' %}" alt="">
+            </div>
+            <div class="btnini">
+                <button class="btnden">REGISTRAR CORREDORES</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

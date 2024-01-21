@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} Corredores {% endblock %}
+{% block div_title %} Corredores {% endblock %}
+
+{% block javascript %}
+    <script>
+        function eliminarCorredor(id_competidor){
+            Swal.fire({
+                'title': 'CiclinTecnolgy',
+                'text': 'Esta Accion no de puede deshacer',
+                'icon': 'question',
+                'showCancelButton': true,
+                'cancelButtonText': 'No, Cancelar',
+                'confirmButtonText': 'Si, Eliminar',
+                'reverseButtons': true,
+                'confirmButtonColor': '#E74A3B'
+
+            })
+                .then( function (result){
+                    if (result.isConfirmed) {
+                        window.location.href = '/corredores/corredores_delete/' + id_competidor + '/'
+                    }
+                })
+        }
+    </script>
+{% endblock %}
+
+
+{% block div_contenido %}
+    <a class="btn btn-success" href="{% url 'corredor_new' %}">Agregar Nuevo Corredor</a>
+
+    <div class="d-flex justify-content-center py-2 px-2">
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>IDEQUIPO</th>
+                <th>ACCIONES</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                {% for correr in corredores %}
+                    <tr>
+                        <td>{{ correr.id_competidor }}</td>
+                        <td>{{ correr.nombre }}</td>
+                        <td>{{ correr.id_equipo }}</td>
+                        <td>
+                            <a class="btn btn-danger" href="{% url 'corredor_delete' correr.id_competidor %}"><i
+                                    class="bi bi-trash3-fill fs-6"></i></a>
+                            <a class="btn btn-warning" href="{% url 'corredor_update' correr.id_competidor %}"><i
+                                    class="bi bi-pencil-fill fs-6"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock %}

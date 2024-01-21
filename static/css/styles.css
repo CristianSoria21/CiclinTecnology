@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chonburi', serif;
+
+
+}
+.principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+.slider{
+    width: 100%;
+    height: 731px;
+    overflow: hidden;
+
+
+}
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite;
+    width: 400%;
+
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+    border-radius: 10px;
+
+}
+.slider img{
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+section{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor{
+    position: relative;
+    width: 400px;
+    margin-right: 100px;
+    border: 2px solid rgba(255,255,255,.6);
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: auto;
+}
+.imagen img
+{
+    position: relative;
+    width: 400px;
+    margin-right: 100px;
+    border: 2px solid rgba(255,255,255,.6);
+    border-radius: 20px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor h2{
+    font-size: 2.6rem;
+    color:white ;
+    text-align: center;
+}
+
+.contenedor p{
+    margin: 10px;
+    font-size: 1.2rem;
+    color:white ;
+    text-align: center;
+}
+.logo
+{
+    display: flex;
+    justify-content: center;
+}
+.img
+{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 20px;
+}
+button{
+    width: 200px;
+    height: 45px;
+    border-radius: 40px;
+    background:white;
+    border: none;
+    margin-left: 100px;
+
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+
+}
+button a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+button:hover {
+    background-color: #4094A6;
+    cursor: pointer;
+}

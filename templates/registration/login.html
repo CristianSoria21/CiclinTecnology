@@ -1,0 +1,28 @@
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycling Tecnology</title>
+
+    <link rel="stylesheet" href="{% static 'css/iniJuez.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+
+<form method="post">
+    {% csrf_token %}
+    <label>Usuario</label>
+    <input type="text" placeholder="Nombre de usuario" name="username">
+    <label>Contraseña</label>
+    <input type="password" placeholder="Contraseña" name="password">
+    <button type="submit">Iniciar Sesion</button>
+</form>
+
+</html>

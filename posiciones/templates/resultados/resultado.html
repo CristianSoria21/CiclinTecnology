@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}  Resultados{% endblock %}
+{% block div_title %} Resultados{% endblock %}
+
+{% block div_contenido %}
+
+
+    <div class="d-flex justify-content-center py-2 px-2">
+        <table class="table table-dark table-striped">
+            <thead>
+            <tr>
+
+                <th>CARRERA</th>
+                <th>N. VUELTAS</th>
+                <th>ACCIONES</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for resultado in resultados %}
+                <tr>
+                    {% if carrera != None and resultado.nombre == carrera %}
+                        {% with nuevo_valor=True %}
+                            {{ resultado.estado|default:nuevo_valor }}
+                        {% endwith %}
+                    {% endif %}
+
+                    <td>{{ resultado.nombre }}</td>
+                    <td>{{ resultado.vueltas }}</td>
+                    <td>
+
+                        <a class="btn btn-success"
+                           href="{% url 'posiciones:resultado_new' %}?carrera={{ resultado.nombre }}"><i
+                                class="bi bi-clipboard2-plus fs-6"></i> Agregar Resultados</a>
+                        <a class="btn btn-primary"
+                           href="{% url 'posiciones:carr_equi_list' %}?carrera={{ resultado.nombre }}"><i
+                                class="bi bi-eye-fill fs-6"></i> Ver Resultados</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock %}

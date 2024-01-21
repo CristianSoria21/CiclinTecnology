@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.horas 
+{
+    font-family: 'Chonburi', serif;
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    background: #ffffff;
+}
+.titulo
+{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.cordinar
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    width: 90%;
+    height: 100px;
+    
+    margin-top: 20px;
+}
+
+.equipos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 150px;
+    background: #E1DECF;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.equipos a
+{
+    text-decoration: none;
+    color: #000000;
+}
